@@ -72,7 +72,6 @@ Respond ONLY in valid JSON (no markdown code fences, no extra text) using this e
 export const hybridTriageModel = getGenerativeModel(ai, {
   mode: InferenceMode.PREFER_ON_DEVICE,
   onDeviceParams: {
-    model: "gemini-3.8-flash",
     promptOptions: {},
   },
   inCloudParams: {
