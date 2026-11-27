@@ -73,9 +73,7 @@ export const hybridTriageModel = getGenerativeModel(ai, {
   mode: InferenceMode.PREFER_ON_DEVICE,
   onDeviceParams: {
     model: "gemini-3.8-flash",
-    promptOptions: {
-      systemInstruction: TRIAGE_INSTRUCTION,
-    },
+    promptOptions: {},
   },
   inCloudParams: {
     model: "gemini-3.8-flash",
@@ -85,7 +83,7 @@ export const hybridTriageModel = getGenerativeModel(ai, {
 
 export const cloudPlannerModel = getGenerativeModel(ai, {
   model: "gemini-3.8-flash",
-  mode: InferenceMode.ONLY_CLOUD,
+  mode: InferenceMode.ONLY_IN_CLOUD,
   inCloudParams: {
     model: "gemini-3.8-flash",
     systemInstruction:
